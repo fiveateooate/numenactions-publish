@@ -5,4 +5,4 @@ COPY requirements.txt /tmp
 RUN apk add --no-cache python3 py3-pip git \
     && pip3 install -r /tmp/requirements.txt
 
-COPY numenpackage /usr/local/bin/
+COPY publish /usr/local/bin/
