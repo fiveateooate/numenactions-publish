@@ -2,8 +2,10 @@ name: 'NumenActions Publish'
 description: 'Build and Push Container to registry'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
-  entrypoint: '/usr/local/bin/publish'
+  image: 'docker://ghcr.io/fiveateooate/numenactions:latest'
+  entrypoint: '/usr/local/bin/numencli'
   args:
     - --loglevel
     - debug
+    - publish
+
